@@ -1,101 +1,103 @@
-import Image from "next/image";
+import Navbar from '@/components/navbar';
+import Hero from '@/components/hero';
+import Footer from '@/components/footer';
+import CourseCard from '@/components/CourseCard';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const featuredCourses = [
+    {
+      id: 1,
+      title: 'Auxiliar de Enfermería',
+      image: '/enfermeria2.jpg',
+      description: 'Forma parte del equipo de atención médica, con un enfoque integral en el cuidado del paciente.',
+      duration: '12 meses'
+    },
+    {
+      id: 2,
+      title: 'Auxiliar de Salud Oral',
+      image: '/images/dental.jpg',
+      description: 'Aprende a asistir en procedimientos odontológicos y a gestionar la higiene bucal de pacientes.',
+      duration: '10 meses'
+    },
+    {
+      id: 3,
+      title: 'Técnico en Farmacia',
+      image: '/images/pharmacy.jpg',
+      description: 'Especialízate en la dispensación de medicamentos y atención farmacéutica.',
+      duration: '14 meses'
+    },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  return (
+    <div className="min-h-screen flex flex-col bg-gray-100 text-gray-900">
+      <Navbar />
+      <Hero />
+      
+      {/* Sección de Cursos Destacados */}
+      <section className="py-12 bg-primary-light">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
+              Nuestros Programas Educativos
+            </h2>
+            <p className="mt-4 max-w-2xl mx-auto text-xl text-gray-700">
+              Formación práctica y teórica con profesionales de excelencia.
+            </p>
+          </div>
+          
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {featuredCourses.map((course) => (
+              <CourseCard 
+                key={course.id}
+                title={course.title}
+                image={course.image}
+                description={course.description}
+                duration={course.duration}
+              />
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+      
+      {/* Sección de Ventajas */}
+      <section className="py-12 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2 className="text-3xl font-extrabold text-primary sm:text-4xl">
+              ¿Por qué elegirnos?
+            </h2>
+          </div>
+          
+          <div className="mt-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="text-center">
+              <h3 className="mt-3 text-xl font-medium text-primary">Docentes Expertos</h3>
+              <p className="mt-2 text-base text-gray-700">
+                Profesionales con amplia experiencia en el sector salud.
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="mt-3 text-xl font-medium text-primary">Práctica Garantizada</h3>
+              <p className="mt-2 text-base text-gray-700">
+                Convenios con instituciones de salud para prácticas profesionales.
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="mt-3 text-xl font-medium text-primary">Instalaciones Modernas</h3>
+              <p className="mt-2 text-base text-gray-700">
+                Laboratorios equipados con tecnología de última generación.
+              </p>
+            </div>
+            <div className="text-center">
+              <h3 className="mt-3 text-xl font-medium text-primary">Bolsa de Empleo</h3>
+              <p className="mt-2 text-base text-gray-700">
+                Apoyo en la inserción laboral para nuestros egresados.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <Footer />
     </div>
   );
 }
