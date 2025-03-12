@@ -21,7 +21,7 @@ export default function Navbar() {
             <Link href="/" className="text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Inicio</Link>
             <Link href="/nosotros" className="text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Nosotros</Link>
             <Link href="/programas" className="text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Programas academicos</Link>
-            <Link href="/contact" className="text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Contacto</Link>
+            <Link href="/contacto" className="text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Contacto</Link>
             <button className="px-5 py-2 rounded-md font-medium text-white bg-gradient-to-r from-[#14A44D] to-[#0B4D75] hover:opacity-90 transition-all">
               Inscríbete ahora
             </button>
