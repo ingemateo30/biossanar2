@@ -41,9 +41,9 @@ export default function Navbar() {
         <div className="md:hidden bg-white/95 backdrop-blur-md shadow-md">
           <div className="px-6 py-4 space-y-3">
             <Link href="/" className="block text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Inicio</Link>
-            <Link href="/about" className="block text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Nosotros</Link>
-            <Link href="/courses" className="block text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Cursos</Link>
-            <Link href="/contact" className="block text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Contacto</Link>
+            <Link href="/nosotros" className="block text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Nosotros</Link>
+            <Link href="/programas" className="block text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Programas academicos</Link>
+            <Link href="/contacto" className="block text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Contacto</Link>
             <button className="w-full mt-3 px-5 py-2 rounded-md text-white bg-gradient-to-r from-[#14A44D] to-[#0B4D75] hover:opacity-90 transition-all">
               Inscríbete ahora
             </button>
