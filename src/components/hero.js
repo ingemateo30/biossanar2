@@ -20,7 +20,7 @@ export default function Hero() {
 
   const slides = [
     {
-      title: "Formación en Salud",
+      title: "Formación en Salud pruebaaaaaaaaaaaaaaaaaaaa",
       subtitle: "Para un futuro brillante",
       description: "Programas diseñados para satisfacer las necesidades del sector de la salud con altos estándares de calidad.",
       image: "/images/hero1.jpg",
