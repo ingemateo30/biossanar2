@@ -22,8 +22,8 @@ export default function DetallePrograma() {
       modalidad: "Presencial",
       horarios: ["Lunes a viernes: 7:00 AM - 12:00 PM", "Lunes a viernes: 6:00 PM - 10:00 PM", "Sábados: 7:00 AM - 5:00 PM"],
       titulo: "Técnico Auxiliar en Enfermería",
-      imagen: "/images/enfermeria.jpg",
-      imagenCover: "/images/enfermeria-cover.jpg",
+      imagen: "/enfermeria.png",
+      imagenCover: "/enfermeria.png",
       resolucion: "Resolución MEN 12345 de 2023",
       proximasConvocatorias: ["Marzo 2025", "Agosto 2025"],
       precio: "$1,500,000 por semestre",
@@ -59,31 +59,58 @@ export default function DetallePrograma() {
         {
           semestre: "Primer semestre",
           materias: [
-            { nombre: "Anatomía y fisiología", creditos: 4, horas: 64 },
-            { nombre: "Fundamentos de enfermería", creditos: 4, horas: 64 },
-            { nombre: "Bioseguridad", creditos: 3, horas: 48 },
-            { nombre: "Comunicación asertiva", creditos: 2, horas: 32 },
-            { nombre: "Ética y valores", creditos: 2, horas: 32 }
+            { nombre: "Anatomía Básica", creditos: 4, horas: 64 },
+            { nombre: "Admisión al usuario", creditos: 4, horas: 64 },
+            { nombre: "Atención integral al usuario", creditos: 3, horas: 48 },
+            { nombre: "Administración de medicamentos ", creditos: 2, horas: 32 },
+            { nombre: "Bienestar del usuario", creditos: 2, horas: 32 },
+            { nombre: "Control de infecciones", creditos: 4, horas: 64 },
+            { nombre: "Técnicas de Estudio ", creditos: 4, horas: 64 },
+            { nombre: "Tecnologías de la información y comunicación (TICS I)", creditos: 3, horas: 48 },
+            { nombre: "Lúdica I ", creditos: 2, horas: 32 },
+            { nombre: "Práctica Hospitalización", creditos: 2, horas: 32 },
+            { nombre: "Práctica Geriátrica ", creditos: 4, horas: 64 },
+            { nombre: "Práctica Comunitaria", creditos: 4, horas: 64 },
+            { nombre: "Práctica Administrativa", creditos: 3, horas: 48 }
           ]
         },
         {
           semestre: "Segundo semestre",
           materias: [
-            { nombre: "Técnicas de enfermería I", creditos: 5, horas: 80 },
-            { nombre: "Farmacología básica", creditos: 3, horas: 48 },
-            { nombre: "Primeros auxilios", creditos: 3, horas: 48 },
-            { nombre: "Administración en salud", creditos: 2, horas: 32 },
-            { nombre: "Práctica clínica I", creditos: 4, horas: 96 }
+            { nombre: "Atención de enfermería en área quirúrgica ", creditos: 5, horas: 80 },
+            { nombre: "Apoyo Diagnóstico ", creditos: 3, horas: 48 },
+            { nombre: "Ética Profesional ", creditos: 3, horas: 48 },
+            { nombre: "Laboratorio clínico ", creditos: 4, horas: 64 },
+            { nombre: "Salud Mental ", creditos: 4, horas: 64 },
+            { nombre: "Farmacología Básica ", creditos: 3, horas: 48 },
+            { nombre: "Fisiopatología  ", creditos: 2, horas: 32 },
+            { nombre: "Plan Ampliado de Inmunización (PAI) ", creditos: 2, horas: 32 },
+            { nombre: "Promoción y Prevención I ", creditos: 4, horas: 64 },
+            { nombre: "Tecnologías de la información y comunicación (TICS II)  ", creditos: 4, horas: 64 },
+            { nombre: "Lúdica II ", creditos: 3, horas: 48 },
+            { nombre: "Práctica en el área de Cirugía  ", creditos: 2, horas: 32 },
+            { nombre: "Práctica en el área de Vacunación PAI", creditos: 2, horas: 32 },
+            { nombre: "Práctica de promoción y prevención  ", creditos: 4, horas: 64 },
+            { nombre: "Práctica de Salud Mental ", creditos: 4, horas: 64 },
+            { nombre: "Practica de laboratorio clínico ", creditos: 3, horas: 48 }
           ]
         },
         {
           semestre: "Tercer semestre",
           materias: [
-            { nombre: "Técnicas de enfermería II", creditos: 4, horas: 64 },
-            { nombre: "Atención al adulto mayor", creditos: 3, horas: 48 },
-            { nombre: "Promoción y prevención", creditos: 3, horas: 48 },
-            { nombre: "Sistemas de información", creditos: 2, horas: 32 },
-            { nombre: "Práctica clínica II", creditos: 6, horas: 144 }
+            { nombre: "Atención Pediátrica ", creditos: 4, horas: 64 },
+            { nombre: "Cuidado a la madre y al recién nacido ", creditos: 4, horas: 64 },
+            { nombre: "promoción y prevención II ", creditos: 3, horas: 48 },
+            { nombre: "Seminario de Primeros Auxilios  ", creditos: 2, horas: 32 },
+            { nombre: "Valoración y Semiología ", creditos: 2, horas: 32 },
+            { nombre: "Salud Ocupacional", creditos: 4, horas: 64 },
+            { nombre: "Seminario de Procesos Básicos de Enfermería", creditos: 4, horas: 64 },
+            { nombre: "Lúdica III", creditos: 3, horas: 48 },
+            { nombre: "Prácticas en el área de Urgencias  ", creditos: 2, horas: 32 },
+            { nombre: "Prácticas en el área de Pediatría ", creditos: 2, horas: 32 },
+            { nombre: "Prácticas en el área de Ginecobstetricia  ", creditos: 4, horas: 64 },
+            { nombre: "prácticas de promoción y prevención II", creditos: 4, horas: 64 },
+            { nombre: "200H de práctica formativa integral  ", creditos: 3, horas: 200 }
           ]
         }
       ],

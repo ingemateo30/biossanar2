@@ -12,7 +12,7 @@ export default function ProgramasAcademicos() {
       duracion: "3 semestres",
       modalidad: "Presencial",
       titulo: "Técnico Auxiliar en Enfermería",
-      imagen: "/enfermeria.png",
+      imagen: "/enfer.png",
       proximasConvocatorias: ["Mayo 2025", "Agosto 2025"],
       precio: "$1,500,000 por semestre",
       detalles: [

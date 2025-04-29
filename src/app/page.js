@@ -66,7 +66,7 @@ export default function AboutUs() {
             {/* Tarjeta 1 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
               <div className="h-48 bg-gray-300 relative">
-                <img src="/enfermeria.png" alt="Auxiliar de Enfermería" className="w-full h-full object-cover" />
+                <img src="/enfer.png" alt="Auxiliar de Enfermería" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
                   3 semestres
                 </div>
@@ -96,7 +96,7 @@ export default function AboutUs() {
             {/* Tarjeta 2 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
               <div className="h-48 bg-gray-300 relative">
-                <img src="/enfermeria.png" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
+                <img src="/oral.png" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
                 3 semestres
                 </div>
