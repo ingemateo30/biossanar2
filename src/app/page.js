@@ -173,8 +173,8 @@ export default function AboutUs() {
                     </svg>
                   </div>
                   <div className="ml-3">
-                    <h4 className="text-lg font-medium text-[#003366]">Simuladores clínicos</h4>
-                    <p className="text-gray-600">Para prácticas seguras antes del contacto con pacientes reales.</p>
+                    <h4 className="text-lg font-medium text-[#003366]">Sala informatica</h4>
+                    <p className="text-gray-600">Para manejo tecnologico de calidad.</p>
                   </div>
                 </div>
 
