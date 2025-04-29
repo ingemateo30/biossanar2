@@ -66,7 +66,7 @@ export default function AboutUs() {
             {/* Tarjeta 1 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
               <div className="h-48 bg-gray-300 relative">
-                <img src="/api/placeholder/400/300" alt="Auxiliar de Enfermería" className="w-full h-full object-cover" />
+                <img src="/enfermeria.png" alt="Auxiliar de Enfermería" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
                   3 semestres
                 </div>
@@ -96,7 +96,7 @@ export default function AboutUs() {
             {/* Tarjeta 2 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
               <div className="h-48 bg-gray-300 relative">
-                <img src="/api/placeholder/400/300" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
+                <img src="/enfermeria.png" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
                 3 semestres
                 </div>
@@ -193,10 +193,10 @@ export default function AboutUs() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <img src="/api/placeholder/300/200" alt="Laboratorio" className="rounded-lg shadow-md" />
-              <img src="/api/placeholder/300/200" alt="Simulador" className="rounded-lg shadow-md" />
-              <img src="/api/placeholder/300/200" alt="Biblioteca" className="rounded-lg shadow-md" />
-              <img src="/api/placeholder/300/200" alt="Aula" className="rounded-lg shadow-md" />
+              <img src="/sede1.jpeg" alt="Laboratorio" className="rounded-lg shadow-md" />
+              <img src="/sede4.jpeg" alt="Simulador" className="rounded-lg shadow-md" />
+              <img src="/sede3.jpeg" alt="Biblioteca" className="rounded-lg shadow-md" />
+              <img src="/sede5.jpeg" alt="Aula" className="rounded-lg shadow-md" />
             </div>
           </div>
         </div>
@@ -266,7 +266,7 @@ export default function AboutUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-[#003366]">Dirección</h4>
-                    <p className="text-gray-700">Calle X #XX-XX, Ciudad</p>
+                    <p className="text-gray-700">Carrera 9 10 39,san gil,santander</p>
                   </div>
                 </div>
 
@@ -278,7 +278,7 @@ export default function AboutUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-[#003366]">Teléfono</h4>
-                    <p className="text-gray-700">+57 123 456 7890</p>
+                    <p className="text-gray-700">+57 311 5716504</p>
                   </div>
                 </div>
 
@@ -290,7 +290,7 @@ export default function AboutUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-[#003366]">Correo Electrónico</h4>
-                    <p className="text-gray-700">contacto@biossanar.com</p>
+                    <p className="text-gray-700">fundacioneducativabiossanar@gmail.com</p>
                   </div>
                 </div>
 
@@ -302,8 +302,8 @@ export default function AboutUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-[#003366]">Horario de Atención</h4>
-                    <p className="text-gray-700">Lunes a Viernes: 7:00 - 18:00</p>
-                    <p className="text-gray-700">Sábados: 8:00 - 12:00</p>
+                    <p className="text-gray-700">Lunes a Viernes: 7:00am - 06:00pm</p>
+                    <p className="text-gray-700">Sábados: 8:00am - 12:00m</p>
                   </div>
                 </div>
               </div>
@@ -386,7 +386,7 @@ export default function AboutUs() {
       <div className="fixed bottom-5 right-5 flex flex-col space-y-3 z-50">
         {/* Botón de WhatsApp */}
         <FloatingWhatsApp
-          phoneNumber="+573212631673"
+          phoneNumber="+573115716504"
           accountName="Biossanar"
           avatar="/whatsapp-avatar.jpg"
           darkMode={true}

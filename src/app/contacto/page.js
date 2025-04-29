@@ -89,7 +89,7 @@ const ContactForm = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Dirección</h3>
-                <p className="text-gray-300">Calle X #XX-XX, Ciudad</p>
+                <p className="text-gray-300">Carrera 9 10 39,san gil,santander</p>
               </div>
             </div>
             
@@ -101,7 +101,7 @@ const ContactForm = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Teléfono</h3>
-                <p className="text-gray-300">+57 123 456 7890</p>
+                <p className="text-gray-300">+57 311 5716504</p>
               </div>
             </div>
             
@@ -113,7 +113,7 @@ const ContactForm = () => {
               </div>
               <div>
                 <h3 className="text-lg font-semibold">Email</h3>
-                <p className="text-gray-300">contacto@biossanar.com</p>
+                <p className="text-gray-300">fundacioneducativabiossanar@gmail.com</p>
               </div>
             </div>
           </div>
@@ -342,7 +342,7 @@ const ContactForm = () => {
               
               <p className="text-xs text-gray-500 mt-4">
                 * Campos requeridos. Al enviar este formulario, aceptas nuestra 
-                <a href="/politica-privacidad" className="text-[#003366] hover:text-[#00B140]"> política de privacidad</a>.
+                <a href="#" className="text-[#003366] hover:text-[#00B140]"> política de privacidad</a>.
               </p>
             </form>
           )}
