@@ -25,14 +25,14 @@ export default function AboutUs() {
             <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140]">
               <h3 className="text-xl font-bold text-[#003366] mb-4">Misión</h3>
               <p className="text-gray-700">
-                Formar profesionales competentes en el área de la salud, con alto sentido ético, responsabilidad social y excelencia académica, capaces de contribuir al bienestar y desarrollo del sector salud en Colombia.
+              La fundación Educativa Biossanar contribuye al mejoramiento de la calidad de vida de los estudiantes con su propuesta pedagógica en la medida en que los va dotando de las competencias necesarias para el desempeño laboral y para que asuman su proyecto de vida.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140]">
               <h3 className="text-xl font-bold text-[#003366] mb-4">Visión</h3>
               <p className="text-gray-700">
-                Para 2030, ser reconocidos como la institución líder en la formación de profesionales de la salud, con presencia nacional y proyección internacional, caracterizada por la innovación educativa y la calidad de sus egresados.
+              La Fundación educativa Biossanar forjará progresivamente en los próximos años un plantel sólido y próspero que tenga en cuenta los adelantos científicos, las nuevas técnicas en materia de autoevaluación y planeamiento y los procesos pedagógicos más convenientes, para brindarle a la comunidad educativa la mejor formación integral
               </p>
             </div>
 
@@ -68,7 +68,7 @@ export default function AboutUs() {
               <div className="h-48 bg-gray-300 relative">
                 <img src="/api/placeholder/400/300" alt="Auxiliar de Enfermería" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
-                  12 meses
+                  3 semestres
                 </div>
               </div>
               <div className="p-6">
@@ -84,7 +84,7 @@ export default function AboutUs() {
                     Certificación Oficial
                   </span>
                   <span className="text-[#00B140] font-medium">
-                    Jornadas: Diurna/Nocturna
+                    Jornadas: Diurna/Nocturna/sabatina
                   </span>
                 </div>
                 <button className="w-full bg-[#003366] hover:bg-[#002347] text-white font-medium py-2 px-4 rounded transition duration-300">
@@ -98,7 +98,7 @@ export default function AboutUs() {
               <div className="h-48 bg-gray-300 relative">
                 <img src="/api/placeholder/400/300" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
-                  10 meses
+                3 semestres
                 </div>
               </div>
               <div className="p-6">
@@ -114,7 +114,7 @@ export default function AboutUs() {
                     Certificación Oficial
                   </span>
                   <span className="text-[#00B140] font-medium">
-                    Jornadas: Diurna/Nocturna
+                    Jornadas: Diurna/Nocturna/sabatina
                   </span>
                 </div>
                 <button className="w-full bg-[#003366] hover:bg-[#002347] text-white font-medium py-2 px-4 rounded transition duration-300">

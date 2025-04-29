@@ -19,7 +19,7 @@ export default function Nosotros() {
           {/* Imagen */}
           <div className="relative">
             <img
-              src="/images/nosotros.jpg"
+              src="/nosotros1.png"
               alt="Equipo Biossanar"
               className="w-full h-auto rounded-lg shadow-lg"
             />
