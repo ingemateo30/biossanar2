@@ -148,6 +148,7 @@ export default function AboutUs() {
                     Jornadas: Diurna
                   </span>
                 </div>
+                <br></br>
                 <a
                   href="/programas/auxiliar-salud-oral"
                   className="block w-full bg-[#003366] hover:bg-[#002347] text-white font-medium py-2 px-4 rounded transition duration-300 text-center"
