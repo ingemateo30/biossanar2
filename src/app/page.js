@@ -5,6 +5,7 @@ import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import { FloatingWhatsApp } from "react-floating-whatsapp";
+import { useEffect, useState } from 'react';
 
 export default function AboutUs() {
   return (
@@ -13,30 +14,42 @@ export default function AboutUs() {
 
 
       <Hero />
-      {/* Sección de Misión, Visión y Valores */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <div className="text-center mb-12 opacity-0 transform translate-y-4"
+            style={{
+              animation: 'fadeInUp 0.8s ease forwards',
+              animationDelay: '0.2s'
+            }}>
             <h2 className="text-3xl font-bold text-[#003366]">Nuestra Institución</h2>
             <div className="w-20 h-1 bg-[#00B140] mx-auto mt-4"></div>
           </div>
-
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140]">
+            <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140] opacity-0 transform translate-y-8"
+              style={{
+                animation: 'fadeInUp 0.8s ease forwards',
+                animationDelay: '0.4s'
+              }}>
               <h3 className="text-xl font-bold text-[#003366] mb-4">Misión</h3>
               <p className="text-gray-700">
                 La fundación Educativa Biossanar contribuye al mejoramiento de la calidad de vida de los estudiantes con su propuesta pedagógica en la medida en que los va dotando de las competencias necesarias para el desempeño laboral y para que asuman su proyecto de vida.
               </p>
             </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140]">
+            <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140] opacity-0 transform translate-y-8"
+              style={{
+                animation: 'fadeInUp 0.8s ease forwards',
+                animationDelay: '0.6s'
+              }}>
               <h3 className="text-xl font-bold text-[#003366] mb-4">Visión</h3>
               <p className="text-gray-700">
                 La Fundación educativa Biossanar forjará progresivamente en los próximos años un plantel sólido y próspero que tenga en cuenta los adelantos científicos, las nuevas técnicas en materia de autoevaluación y planeamiento y los procesos pedagógicos más convenientes, para brindarle a la comunidad educativa la mejor formación integral
               </p>
             </div>
-
-            <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140]">
+            <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140] opacity-0 transform translate-y-8"
+              style={{
+                animation: 'fadeInUp 0.8s ease forwards',
+                animationDelay: '0.8s'
+              }}>
               <h3 className="text-xl font-bold text-[#003366] mb-4">Valores</h3>
               <ul className="text-gray-700 space-y-2">
                 <li>• Ética profesional</li>
@@ -48,7 +61,22 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
+
+        {/* Estilos CSS para las animaciones */}
+        <style jsx>{`
+            @keyframes fadeInUp {
+              from {
+                opacity: 0;
+                transform: translateY(20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+          `}</style>
       </section>
+
 
       {/* Sección de Programas Académicos */}
       <section className="py-16 bg-white">
@@ -66,7 +94,7 @@ export default function AboutUs() {
             {/* Tarjeta 1 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
               <div className="h-48 bg-gray-300 relative">
-                <img src="/enfer.png" alt="Auxiliar de Enfermería" className="w-full h-full object-cover" />
+                <img src="/enfermeria3.png" alt="Auxiliar de Enfermería" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
                   3 semestres
                 </div>
@@ -84,7 +112,7 @@ export default function AboutUs() {
                     Certificación Oficial
                   </span>
                   <span className="text-[#00B140] font-medium">
-                    Jornadas: Diurna/Nocturna/sabatina
+                    Jornadas: Diurna/Nocturna/fines de semana
                   </span>
                 </div>
                 <a
@@ -99,7 +127,7 @@ export default function AboutUs() {
             {/* Tarjeta 2 */}
             <div className="bg-gray-50 rounded-lg overflow-hidden shadow-md">
               <div className="h-48 bg-gray-300 relative">
-                <img src="/oral.png" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
+                <img src="/saludoral.png" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
                   3 semestres
                 </div>
@@ -117,7 +145,7 @@ export default function AboutUs() {
                     Certificación Oficial
                   </span>
                   <span className="text-[#00B140] font-medium">
-                    Jornadas: Diurna/Nocturna/sabatina
+                    Jornadas: Diurna
                   </span>
                 </div>
                 <a
@@ -142,25 +170,51 @@ export default function AboutUs() {
         </div>
       </section>
 
-
-
-      {/* Sección de Infraestructura */}
+      {/* Sección de Infraestructura con animaciones */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-12">
+          <div
+            className="text-center mb-12 opacity-0 transform translate-y-4"
+            style={{
+              animation: 'fadeInUp 0.8s ease forwards',
+              animationDelay: '0.2s'
+            }}
+          >
             <h2 className="text-3xl font-bold text-[#003366]">Nuestra Infraestructura</h2>
             <div className="w-20 h-1 bg-[#00B140] mx-auto mt-4"></div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8 items-center">
+            {/* Columna de texto */}
             <div>
-              <h3 className="text-2xl font-bold text-[#003366] mb-4">Instalaciones diseñadas para el aprendizaje</h3>
-              <p className="text-gray-700 mb-6">
+              <h3
+                className="text-2xl font-bold text-[#003366] mb-4 opacity-0 transform translate-y-4"
+                style={{
+                  animation: 'fadeInUp 0.8s ease forwards',
+                  animationDelay: '0.4s'
+                }}
+              >
+                Instalaciones diseñadas para el aprendizaje
+              </h3>
+              <p
+                className="text-gray-700 mb-6 opacity-0 transform translate-y-4"
+                style={{
+                  animation: 'fadeInUp 0.8s ease forwards',
+                  animationDelay: '0.5s'
+                }}
+              >
                 Contamos con modernas instalaciones especialmente diseñadas para brindar una formación práctica de calidad, simulando entornos reales del sector salud.
               </p>
 
               <div className="space-y-4">
-                <div className="flex items-start">
+                {/* Primer ítem */}
+                <div
+                  className="flex items-start opacity-0 transform translate-x-4"
+                  style={{
+                    animation: 'fadeInLeft 0.7s ease forwards',
+                    animationDelay: '0.6s'
+                  }}
+                >
                   <div className="flex-shrink-0 mt-1">
                     <svg className="w-5 h-5 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
@@ -172,7 +226,14 @@ export default function AboutUs() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                {/* Segundo ítem */}
+                <div
+                  className="flex items-start opacity-0 transform translate-x-4"
+                  style={{
+                    animation: 'fadeInLeft 0.7s ease forwards',
+                    animationDelay: '0.8s'
+                  }}
+                >
                   <div className="flex-shrink-0 mt-1">
                     <svg className="w-5 h-5 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
@@ -184,7 +245,14 @@ export default function AboutUs() {
                   </div>
                 </div>
 
-                <div className="flex items-start">
+                {/* Tercer ítem */}
+                <div
+                  className="flex items-start opacity-0 transform translate-x-4"
+                  style={{
+                    animation: 'fadeInLeft 0.7s ease forwards',
+                    animationDelay: '1s'
+                  }}
+                >
                   <div className="flex-shrink-0 mt-1">
                     <svg className="w-5 h-5 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
@@ -198,14 +266,83 @@ export default function AboutUs() {
               </div>
             </div>
 
+            {/* Columna de imágenes */}
             <div className="grid grid-cols-2 gap-4">
-              <img src="/sede1.jpeg" alt="Laboratorio" className="rounded-lg shadow-md" />
-              <img src="/sede4.jpeg" alt="Simulador" className="rounded-lg shadow-md" />
-              <img src="/sede3.jpeg" alt="Biblioteca" className="rounded-lg shadow-md" />
-              <img src="/sede5.jpeg" alt="Aula" className="rounded-lg shadow-md" />
+              <img
+                src="/sede1.jpeg"
+                alt="Laboratorio"
+                className="rounded-lg shadow-md opacity-0"
+                style={{
+                  animation: 'zoomIn 0.8s ease forwards',
+                  animationDelay: '0.7s'
+                }}
+              />
+              <img
+                src="/sede4.jpeg"
+                alt="Simulador"
+                className="rounded-lg shadow-md opacity-0"
+                style={{
+                  animation: 'zoomIn 0.8s ease forwards',
+                  animationDelay: '0.9s'
+                }}
+              />
+              <img
+                src="/sede3.jpeg"
+                alt="Biblioteca"
+                className="rounded-lg shadow-md opacity-0"
+                style={{
+                  animation: 'zoomIn 0.8s ease forwards',
+                  animationDelay: '1.1s'
+                }}
+              />
+              <img
+                src="/sede5.jpeg"
+                alt="Aula"
+                className="rounded-lg shadow-md opacity-0"
+                style={{
+                  animation: 'zoomIn 0.8s ease forwards',
+                  animationDelay: '1.3s'
+                }}
+              />
             </div>
           </div>
         </div>
+
+                {/* Definición de las animaciones */}
+                <style jsx>{`
+            @keyframes fadeInUp {
+              from {
+                opacity: 0;
+                transform: translateY(20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
+            }
+            
+            @keyframes fadeInLeft {
+              from {
+                opacity: 0;
+                transform: translateX(20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+            
+            @keyframes zoomIn {
+              from {
+                opacity: 0;
+                transform: scale(0.95);
+              }
+              to {
+                opacity: 1;
+                transform: scale(1);
+              }
+            }
+          `}</style>
       </section>
 
       {/* Sección de Convenios */}
@@ -251,6 +388,7 @@ export default function AboutUs() {
           </div>
         </div>
       </section>
+
       {/* Sección de Call-to-Action */}
       <section className="py-16 bg-[#003366]">
         <div className="max-w-5xl mx-auto px-6 text-center">

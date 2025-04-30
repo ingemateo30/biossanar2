@@ -139,6 +139,11 @@ export default function DetallePrograma() {
         titulo: "Enfermera profesional con gran experiencia en gestion academica y administrativa",
         foto: "/blanco.png"
       },
+      rector: {
+        nombre: "Jaime Lamo",
+        titulo: "",
+        foto: "/blanco.png"
+      },
       faqs: [
         {
           pregunta: "¿Puedo trabajar mientras estudio?",
@@ -250,6 +255,11 @@ export default function DetallePrograma() {
         titulo: "Enfermera profesional con gran experiencia en gestion academica y administrativa",
         foto: "/blanco.png"
       },
+      rector: {
+        nombre: "Jaime Lamo",
+        titulo: "",
+        foto: "/blanco.png"
+      },
       faqs: [
         {
           pregunta: "¿Puedo trabajar mientras estudio?",
@@ -312,50 +322,68 @@ export default function DetallePrograma() {
       </div>
 
       {/* Navegación por tabs */}
-      <div className="border-b">
+      <div className="border-b shadow-sm bg-white">
         <div className="container mx-auto px-4">
           <div className="flex overflow-x-auto whitespace-nowrap">
             <button
               onClick={() => setActiveTab('descripcion')}
-              className={`py-4 px-6 font-medium border-b-2 transition-colors ${activeTab === 'descripcion' ? 'border-blue-600 text-blue-600' : 'border-transparent'
+              className={`py-4 px-6 font-medium border-b-2 transition-colors duration-200 flex items-center gap-2 ${activeTab === 'descripcion'
+                  ? 'border-blue-600 text-blue-600 bg-blue-50'
+                  : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-blue-500'
                 }`}
             >
-              Descripción
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+              <span>Descripción</span>
             </button>
             <button
               onClick={() => setActiveTab('pensum')}
-              className={`py-4 px-6 font-medium border-b-2 transition-colors ${activeTab === 'pensum' ? 'border-blue-600 text-blue-600' : 'border-transparent'
+              className={`py-4 px-6 font-medium border-b-2 transition-colors duration-200 flex items-center gap-2 ${activeTab === 'pensum'
+                  ? 'border-blue-600 text-blue-600 bg-blue-50'
+                  : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-blue-500'
                 }`}
             >
-              Plan de Estudios
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"></path></svg>
+              <span>Plan de Estudios</span>
             </button>
             <button
               onClick={() => setActiveTab('admisiones')}
-              className={`py-4 px-6 font-medium border-b-2 transition-colors ${activeTab === 'admisiones' ? 'border-blue-600 text-blue-600' : 'border-transparent'
+              className={`py-4 px-6 font-medium border-b-2 transition-colors duration-200 flex items-center gap-2 ${activeTab === 'admisiones'
+                  ? 'border-blue-600 text-blue-600 bg-blue-50'
+                  : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-blue-500'
                 }`}
             >
-              Admisiones
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path><path d="M15 2H9a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1z"></path><path d="M12 11h4"></path><path d="M12 16h4"></path><path d="M8 11h.01"></path><path d="M8 16h.01"></path></svg>
+              <span>Admisiones</span>
             </button>
             <button
               onClick={() => setActiveTab('practicas')}
-              className={`py-4 px-6 font-medium border-b-2 transition-colors ${activeTab === 'practicas' ? 'border-blue-600 text-blue-600' : 'border-transparent'
+              className={`py-4 px-6 font-medium border-b-2 transition-colors duration-200 flex items-center gap-2 ${activeTab === 'practicas'
+                  ? 'border-blue-600 text-blue-600 bg-blue-50'
+                  : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-blue-500'
                 }`}
             >
-              Prácticas
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="14" x="2" y="7" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+              <span>Prácticas</span>
             </button>
             <button
               onClick={() => setActiveTab('testimonios')}
-              className={`py-4 px-6 font-medium border-b-2 transition-colors ${activeTab === 'testimonios' ? 'border-blue-600 text-blue-600' : 'border-transparent'
+              className={`py-4 px-6 font-medium border-b-2 transition-colors duration-200 flex items-center gap-2 ${activeTab === 'testimonios'
+                  ? 'border-blue-600 text-blue-600 bg-blue-50'
+                  : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-blue-500'
                 }`}
             >
-              Testimonios
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              <span>Testimonios</span>
             </button>
             <button
               onClick={() => setActiveTab('faq')}
-              className={`py-4 px-6 font-medium border-b-2 transition-colors ${activeTab === 'faq' ? 'border-blue-600 text-blue-600' : 'border-transparent'
+              className={`py-4 px-6 font-medium border-b-2 transition-colors duration-200 flex items-center gap-2 ${activeTab === 'faq'
+                  ? 'border-blue-600 text-blue-600 bg-blue-50'
+                  : 'border-transparent text-gray-600 hover:bg-gray-50 hover:text-blue-500'
                 }`}
             >
-              Preguntas Frecuentes
+              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><path d="M12 17h.01"></path></svg>
+              <span>Preguntas Frecuentes</span>
             </button>
           </div>
         </div>
@@ -369,7 +397,6 @@ export default function DetallePrograma() {
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-6">Acerca del Programa</h2>
               <p className="text-lg mb-8">{programa.descripcion}</p>
-
               <div className="grid md:grid-cols-2 gap-8 mb-12">
                 <div>
                   <h3 className="text-xl font-semibold mb-4">Perfil del Egresado</h3>
@@ -388,7 +415,6 @@ export default function DetallePrograma() {
                   </ul>
                 </div>
               </div>
-
               <div className="bg-gray-50 p-6 rounded-lg border">
                 <div className="flex flex-col md:flex-row items-center">
                   <div className="md:w-1/4 mb-4 md:mb-0">
