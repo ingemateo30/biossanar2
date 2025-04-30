@@ -23,7 +23,7 @@ export default function Navbar() {
             <Link href="/programas" className="text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Programas academicos</Link>
             <Link href="/contacto" className="text-[#0B4D75] hover:text-[#14A44D] font-medium transition-all">Contacto</Link>
             <a
-              href="/ruta-de-inscripcion"
+              href="https://wa.me/573246723624?text=Hola%20quiero%20más%20información%20sobre%20los%20programas"
               className="px-5 py-2 rounded-md font-medium text-white bg-gradient-to-r from-[#14A44D] to-[#0B4D75] hover:opacity-90 transition-all inline-block"
             >
               Inscríbete ahora
