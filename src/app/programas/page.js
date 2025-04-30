@@ -11,10 +11,10 @@ export default function ProgramasAcademicos() {
       descripcion: "Formación integral para el cuidado de la salud y el bienestar de los pacientes.",
       duracion: "3 semestres",
       modalidad: "Presencial",
-      titulo: "Técnico Auxiliar en Enfermería",
-      imagen: "/enfer.png",
-      proximasConvocatorias: ["Mayo 2025", "Agosto 2025"],
-      precio: "$1,500,000 por semestre",
+      titulo: "Técnico Laboral Auxiliar en Enfermería",
+      imagen: "/sede2.jpeg",
+      proximasConvocatorias: ["Mayo 2025", "Octubre 2025"],
+      precio: "$1.930.000 por semestre",
       detalles: [
         "Asistencia en cuidados básicos",
         "Administración de medicamentos",
@@ -28,10 +28,10 @@ export default function ProgramasAcademicos() {
       descripcion: "Capacitación en prevención y asistencia en procedimientos odontológicos.",
       duracion: "3 semestres",
       modalidad: "Presencial",
-      titulo: "Técnico Auxiliar en Salud Oral",
-      imagen: "/enfermeria.png",
-      proximasConvocatorias: ["Mayo 2025", "Septiembre 2025"],
-      precio: "$1,300,000 por semestre",
+      titulo: "Técnico Laboral Auxiliar en Salud Oral",
+      imagen: "/oral.jpeg",
+      proximasConvocatorias: ["Mayo 2025", "Octubre 2025"],
+      precio: "$ 1.685.000 por semestre",
       detalles: [
         "Asistencia en procedimientos odontológicos",
         "Esterilización de instrumentos",
@@ -110,7 +110,7 @@ export default function ProgramasAcademicos() {
           <h3 className="text-2xl font-bold mb-4">¿Necesitas más información?</h3>
           <p className="text-lg mb-6">Nuestros asesores están listos para resolver todas tus dudas y guiarte en el proceso de inscripción.</p>
           <Link 
-            href="/contacto"
+            href="https://wa.me/573246723624?text=Hola%20quiero%20más%20información%20sobre%20los%20programas"
             className="inline-block bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition text-lg"
           >
             Contáctanos

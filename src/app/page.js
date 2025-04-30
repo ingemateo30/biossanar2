@@ -25,14 +25,14 @@ export default function AboutUs() {
             <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140]">
               <h3 className="text-xl font-bold text-[#003366] mb-4">Misión</h3>
               <p className="text-gray-700">
-              La fundación Educativa Biossanar contribuye al mejoramiento de la calidad de vida de los estudiantes con su propuesta pedagógica en la medida en que los va dotando de las competencias necesarias para el desempeño laboral y para que asuman su proyecto de vida.
+                La fundación Educativa Biossanar contribuye al mejoramiento de la calidad de vida de los estudiantes con su propuesta pedagógica en la medida en que los va dotando de las competencias necesarias para el desempeño laboral y para que asuman su proyecto de vida.
               </p>
             </div>
 
             <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-[#00B140]">
               <h3 className="text-xl font-bold text-[#003366] mb-4">Visión</h3>
               <p className="text-gray-700">
-              La Fundación educativa Biossanar forjará progresivamente en los próximos años un plantel sólido y próspero que tenga en cuenta los adelantos científicos, las nuevas técnicas en materia de autoevaluación y planeamiento y los procesos pedagógicos más convenientes, para brindarle a la comunidad educativa la mejor formación integral
+                La Fundación educativa Biossanar forjará progresivamente en los próximos años un plantel sólido y próspero que tenga en cuenta los adelantos científicos, las nuevas técnicas en materia de autoevaluación y planeamiento y los procesos pedagógicos más convenientes, para brindarle a la comunidad educativa la mejor formación integral
               </p>
             </div>
 
@@ -87,9 +87,12 @@ export default function AboutUs() {
                     Jornadas: Diurna/Nocturna/sabatina
                   </span>
                 </div>
-                <button className="w-full bg-[#003366] hover:bg-[#002347] text-white font-medium py-2 px-4 rounded transition duration-300">
+                <a
+                  href="/programas/auxiliar-enfermeria"
+                  className="block w-full bg-[#003366] hover:bg-[#002347] text-white font-medium py-2 px-4 rounded transition duration-300 text-center"
+                >
                   Más información
-                </button>
+                </a>
               </div>
             </div>
 
@@ -98,7 +101,7 @@ export default function AboutUs() {
               <div className="h-48 bg-gray-300 relative">
                 <img src="/oral.png" alt="Auxiliar de Salud Oral" className="w-full h-full object-cover" />
                 <div className="absolute top-0 right-0 bg-[#003366] text-white font-medium py-1 px-3 text-sm">
-                3 semestres
+                  3 semestres
                 </div>
               </div>
               <div className="p-6">
@@ -117,9 +120,12 @@ export default function AboutUs() {
                     Jornadas: Diurna/Nocturna/sabatina
                   </span>
                 </div>
-                <button className="w-full bg-[#003366] hover:bg-[#002347] text-white font-medium py-2 px-4 rounded transition duration-300">
+                <a
+                  href="/programas/auxiliar-salud-oral"
+                  className="block w-full bg-[#003366] hover:bg-[#002347] text-white font-medium py-2 px-4 rounded transition duration-300 text-center"
+                >
                   Más información
-                </button>
+                </a>
               </div>
             </div>
           </div>
@@ -209,27 +215,42 @@ export default function AboutUs() {
             <h2 className="text-3xl font-bold text-[#003366]">Convenios Institucionales</h2>
             <div className="w-20 h-1 bg-[#00B140] mx-auto mt-4"></div>
             <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
-              Contamos con convenios para prácticas profesionales con las principales instituciones de salud.
+              Contamos con convenios para prácticas profesionales con las principales instituciones de salud de la región
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
-              <img src="/api/placeholder/120/80" alt="Hospital San Rafael" className="max-h-16" />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+              <img
+                src="/sangil.png"
+                alt="Hospital Regional de Sangil"
+                className="w-11/12 h-64 object-contain"
+              />
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
-              <img src="/api/placeholder/120/80" alt="Clínica del Norte" className="max-h-16" />
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+              <img
+                src="esp.png"
+                alt="espsalud ips"
+                className="w-11/12 h-56 object-contain"
+              />
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
-              <img src="/api/placeholder/120/80" alt="Centro Médico Nacional" className="max-h-16" />
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+              <img
+                src="/hea.png"
+                alt="heath"
+                className="w-11/12 h-56 object-contain"
+              />
             </div>
-            <div className="bg-gray-50 p-6 rounded-lg shadow-sm flex items-center justify-center h-32">
-              <img src="/api/placeholder/120/80" alt="Instituto de Salud" className="max-h-16" />
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+              <img
+                src="/bios.png"
+                alt="Ibiossanar ips"
+                className="w-11/12 h-56 object-contain"
+              />
             </div>
           </div>
         </div>
       </section>
-
       {/* Sección de Call-to-Action */}
       <section className="py-16 bg-[#003366]">
         <div className="max-w-5xl mx-auto px-6 text-center">
@@ -238,12 +259,18 @@ export default function AboutUs() {
             Inscripciones abiertas para todos nuestros programas académicos. Da el primer paso hacia tu carrera en el sector salud.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
-            <button className="bg-[#00B140] hover:bg-[#009935] text-white font-medium py-3 px-8 rounded-lg transition duration-300">
+            <a
+              href="https://wa.me/573246723624?text=Hola%20quiero%20más%20información%20sobre%20los%20programas"
+              className="inline-block bg-[#00B140] hover:bg-[#009935] text-white font-medium py-3 px-8 rounded-lg transition duration-300 text-center"
+            >
               Inscríbete ahora
-            </button>
-            <button className="bg-white text-[#003366] hover:bg-blue-100 font-medium py-3 px-8 rounded-lg transition duration-300">
+            </a>
+            <a
+              href="https://wa.me/573246723624?text=Hola%20quiero%20más%20información%20sobre%20los%20programas"
+              className="inline-block bg-white text-[#003366] hover:bg-blue-100 font-medium py-3 px-8 rounded-lg transition duration-300 text-center ml-4"
+            >
               Solicitar información
-            </button>
+            </a>
           </div>
         </div>
       </section>
@@ -266,7 +293,7 @@ export default function AboutUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-[#003366]">Dirección</h4>
-                    <p className="text-gray-700">Carrera 9 10 39,san gil,santander</p>
+                    <p className="text-gray-700"> cra 9 #10-33 piso 5 edificio biossanar</p>
                   </div>
                 </div>
 
@@ -278,7 +305,7 @@ export default function AboutUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-[#003366]">Teléfono</h4>
-                    <p className="text-gray-700">+57 311 5716504</p>
+                    <p className="text-gray-700">+57 3246723624</p>
                   </div>
                 </div>
 
@@ -302,8 +329,7 @@ export default function AboutUs() {
                   </div>
                   <div className="ml-4">
                     <h4 className="text-lg font-medium text-[#003366]">Horario de Atención</h4>
-                    <p className="text-gray-700">Lunes a Viernes: 7:00am - 06:00pm</p>
-                    <p className="text-gray-700">Sábados: 8:00am - 12:00m</p>
+                    <p className="text-gray-700">Lunes a Viernes: 7:00am - 05:30pm</p>
                   </div>
                 </div>
               </div>
@@ -386,9 +412,9 @@ export default function AboutUs() {
       <div className="fixed bottom-5 right-5 flex flex-col space-y-3 z-50">
         {/* Botón de WhatsApp */}
         <FloatingWhatsApp
-          phoneNumber="+573115716504"
+          phoneNumber="+573246723624"
           accountName="Biossanar"
-          avatar="/whatsapp-avatar.jpg"
+          avatar="/biossanar2.png"
           darkMode={true}
           statusMessage="Normalmente responde en 1 hora"
           chatMessage="¡Hola!, ¿en qué te podemos ayudar?"
@@ -399,7 +425,7 @@ export default function AboutUs() {
       </div>
       <div className="fixed bottom-5 left-0 z-50 flex flex-col">
         <a
-          href="#contacto"
+          href="https://wa.me/573246723624?text=Hola%20quiero%20más%20información%20sobre%20los%20programas"
           className="group flex items-center bg-[#28a745] text-white p-3 rounded-r-lg shadow-md transition-all duration-300 hover:pl-6"
         >
           <svg className="w-5 h-5 transition-all duration-300" fill="currentColor" viewBox="0 0 24 24">
