@@ -257,6 +257,40 @@ export default function PoliticaCalidad() {
                                 </li>
                             </ul>
                         </div>
+
+                        <div className="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-purple-600">
+                            <div className="flex items-center mb-6">
+                                <div className="bg-purple-600 w-12 h-12 rounded-full flex items-center justify-center mr-4">
+                                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                    </svg>
+                                </div>
+                                <h3 className="text-xl font-bold text-[#003366]">NTC 5663</h3>
+                            </div>
+                            <p className="text-gray-700 mb-4">
+                                Norma Técnica Colombiana que establece los lineamientos para la gestión del proceso de enseñanza-aprendizaje en instituciones de educación para el trabajo y desarrollo humano.
+                            </p>
+                            <ul className="space-y-2">
+                                <li className="flex items-center text-sm text-gray-600">
+                                    <svg className="w-4 h-4 mr-2 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    Metodologías pedagógicas
+                                </li>
+                                <li className="flex items-center text-sm text-gray-600">
+                                    <svg className="w-4 h-4 mr-2 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    Competencias laborales
+                                </li>
+                                <li className="flex items-center text-sm text-gray-600">
+                                    <svg className="w-4 h-4 mr-2 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                    </svg>
+                                    Planes de formación integral
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
