@@ -268,7 +268,7 @@ export default function PoliticaCalidad() {
                                 <h3 className="text-xl font-bold text-[#003366]">NTC 5663</h3>
                             </div>
                             <p className="text-gray-700 mb-4">
-                                Norma Técnica Colombiana que establece los lineamientos para la gestión del proceso de enseñanza-aprendizaje en instituciones de educación para el trabajo y desarrollo humano.
+                                Norma Técnica Colombiana que establece los lineamientos para la gestión del proceso de enseñanza-aprendizaje en instituciones de educación para el trabajo y desarrollo humano en areas de la salud.
                             </p>
                             <ul className="space-y-2">
                                 <li className="flex items-center text-sm text-gray-600">
