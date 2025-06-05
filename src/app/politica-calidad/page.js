@@ -3,8 +3,15 @@
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Image from 'next/image';
+import { useState } from 'react';
 
 export default function PoliticaCalidad() {
+    const [imageError, setImageError] = useState(false);
+
+    const handleImageError = () => {
+        setImageError(true);
+    };
+
     return (
         <>
             <Navbar />
@@ -50,6 +57,42 @@ export default function PoliticaCalidad() {
                                     </p>
                                 </div>
                             </div>
+
+                            {/* Principios de Calidad */}
+                            <div className="bg-white border border-gray-200 rounded-2xl p-8 shadow-lg">
+                                <h3 className="text-xl font-bold text-[#003366] mb-6 flex items-center">
+                                    <svg className="w-6 h-6 mr-3 text-[#00B140]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                                    </svg>
+                                    Principios Fundamentales
+                                </h3>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                    <div className="flex items-start space-x-3">
+                                        <div className="flex-shrink-0 w-2 h-2 bg-[#00B140] rounded-full mt-2"></div>
+                                        <span className="text-gray-700">Servicio confiable</span>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="flex-shrink-0 w-2 h-2 bg-[#00B140] rounded-full mt-2"></div>
+                                        <span className="text-gray-700">Formación íntegra</span>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="flex-shrink-0 w-2 h-2 bg-[#00B140] rounded-full mt-2"></div>
+                                        <span className="text-gray-700">Atención oportuna</span>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="flex-shrink-0 w-2 h-2 bg-[#00B140] rounded-full mt-2"></div>
+                                        <span className="text-gray-700">Enfoque participativo</span>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="flex-shrink-0 w-2 h-2 bg-[#00B140] rounded-full mt-2"></div>
+                                        <span className="text-gray-700">Mejoramiento continuo</span>
+                                    </div>
+                                    <div className="flex items-start space-x-3">
+                                        <div className="flex-shrink-0 w-2 h-2 bg-[#00B140] rounded-full mt-2"></div>
+                                        <span className="text-gray-700">Protección ambiental</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Certificación ISO */}
@@ -57,29 +100,29 @@ export default function PoliticaCalidad() {
                             <div className="bg-gradient-to-br from-gray-50 to-blue-50 p-8 rounded-2xl text-center">
                                 <h3 className="text-2xl font-bold text-[#003366] mb-6">Certificación ISO 9001:2015</h3>
 
-                                {/* Imagen del certificado - reemplaza con tu certificado real */}
+                                {/* Imagen del certificado con manejo de error mediante useState */}
                                 <div className="relative mb-6">
                                     <div className="bg-white p-6 rounded-xl shadow-lg">
-                                        <Image
-                                            src="/iso-certification.jpeg"
-                                            alt="Certificación ISO 9001:2015 - Biossanar"
-                                            width={400}
-                                            height={500}
-                                            className="w-full h-auto object-contain"
-                                            onError={(e) => {
-                                                e.target.style.display = 'none';
-                                                e.target.nextSibling.style.display = 'flex';
-                                            }}
-                                        />
-                                        {/* Fallback en caso de que no exista la imagen */}
-                                        <div className="hidden flex-col items-center justify-center h-96 bg-gradient-to-br from-[#003366] to-[#00B140] text-white rounded-lg">
-                                            <svg className="w-20 h-20 mb-4" fill="currentColor" viewBox="0 0 24 24">
-                                                <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.1 16,12.7V16.3C16,16.9 15.4,17.5 14.8,17.5H9.2C8.6,17.5 8,16.9 8,16.3V12.7C8,12.1 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z" />
-                                            </svg>
-                                            <h3 className="text-2xl font-bold mb-2">ISO 9001:2015</h3>
-                                            <p className="text-center text-blue-100">Sistema de Gestión de Calidad</p>
-                                            <p className="text-sm text-blue-200 mt-2">Fundación Educativa Biossanar</p>
-                                        </div>
+                                        {!imageError ? (
+                                            <Image
+                                                src="/iso-certification.jpeg"
+                                                alt="Certificación ISO 9001:2015 - Biossanar"
+                                                width={400}
+                                                height={500}
+                                                className="w-full h-auto object-contain"
+                                                onError={handleImageError}
+                                            />
+                                        ) : (
+                                            /* Fallback cuando no existe la imagen */
+                                            <div className="flex flex-col items-center justify-center h-96 bg-gradient-to-br from-[#003366] to-[#00B140] text-white rounded-lg">
+                                                <svg className="w-20 h-20 mb-4" fill="currentColor" viewBox="0 0 24 24">
+                                                    <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,7C13.4,7 14.8,8.6 14.8,10V11.5C15.4,11.5 16,12.1 16,12.7V16.3C16,16.9 15.4,17.5 14.8,17.5H9.2C8.6,17.5 8,16.9 8,16.3V12.7C8,12.1 8.6,11.5 9.2,11.5V10C9.2,8.6 10.6,7 12,7M12,8.2C11.2,8.2 10.5,8.7 10.5,10V11.5H13.5V10C13.5,8.7 12.8,8.2 12,8.2Z" />
+                                                </svg>
+                                                <h3 className="text-2xl font-bold mb-2">ISO 9001:2015</h3>
+                                                <p className="text-center text-blue-100">Sistema de Gestión de Calidad</p>
+                                                <p className="text-sm text-blue-200 mt-2">Fundación Educativa Biossanar</p>
+                                            </div>
+                                        )}
                                     </div>
                                 </div>
 
@@ -94,6 +137,42 @@ export default function PoliticaCalidad() {
                                         Nuestro Sistema de Gestión de Calidad está certificado bajo la norma internacional ISO 9001:2015
                                     </p>
                                 </div>
+                            </div>
+
+                            {/* Beneficios de la Certificación */}
+                            <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg">
+                                <h4 className="text-lg font-bold text-[#003366] mb-4 flex items-center">
+                                    <svg className="w-5 h-5 mr-2 text-[#00B140]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                    Beneficios para Nuestros Estudiantes
+                                </h4>
+                                <ul className="space-y-3">
+                                    <li className="flex items-start">
+                                        <svg className="w-4 h-4 text-[#00B140] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                        </svg>
+                                        <span className="text-gray-700 text-sm">Garantía de procesos educativos estandarizados</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <svg className="w-4 h-4 text-[#00B140] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                        </svg>
+                                        <span className="text-gray-700 text-sm">Mejoramiento continuo en la calidad educativa</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <svg className="w-4 h-4 text-[#00B140] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                        </svg>
+                                        <span className="text-gray-700 text-sm">Satisfacción garantizada del estudiante</span>
+                                    </li>
+                                    <li className="flex items-start">
+                                        <svg className="w-4 h-4 text-[#00B140] mr-3 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                                        </svg>
+                                        <span className="text-gray-700 text-sm">Minimización de riesgos en el proceso formativo</span>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </div>
