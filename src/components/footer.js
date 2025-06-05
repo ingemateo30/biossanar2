@@ -146,6 +146,31 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+
+        {/* Nueva sección de certificaciones */}
+        <div className="py-6 border-b border-blue-400 border-opacity-30">
+          <div className="text-center mb-6">
+            <h3 className="text-[#00B140] font-bold text-lg">Certificaciones y Acreditaciones</h3>
+          </div>
+          <div className="flex justify-center items-center space-x-8">
+            {/* Certificación ISO - reemplaza con tu imagen real */}
+            <div className="bg-white p-3 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+              <img 
+                src="/iso-certification.jpeg" 
+                alt="Certificación ISO" 
+                className="h-16 w-auto object-contain"
+                onError={(e) => {
+                  // Fallback en caso de que la imagen no exista
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="hidden items-center justify-center h-16 w-20 bg-gray-100 text-gray-500 text-xs rounded">
+                ISO CERT
+              </div>
+            </div>
+          </div>
+        </div>
         
         {/* Bottom Section */}
         <div className="pt-8 text-center">
@@ -160,5 +185,4 @@ export default function Footer() {
     </footer>
   );
 }
-  
   

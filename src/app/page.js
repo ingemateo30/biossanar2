@@ -1,6 +1,7 @@
 "use client";
 
 import React from 'react';
+import { useRouter } from 'next/router';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
@@ -8,6 +9,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { useEffect, useState } from 'react';
 
 export default function AboutUs() {
+
   return (
     <div className="min-h-screen flex flex-col bg-gray-50">
       <Navbar />
@@ -309,8 +311,8 @@ export default function AboutUs() {
           </div>
         </div>
 
-                {/* Definición de las animaciones */}
-                <style jsx>{`
+        {/* Definición de las animaciones */}
+        <style jsx>{`
             @keyframes fadeInUp {
               from {
                 opacity: 0;
@@ -346,7 +348,8 @@ export default function AboutUs() {
           `}</style>
       </section>
 
-      {/* Sección de Convenios */}
+
+      {/* Sección de Convenios Actualizada */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-12">
@@ -357,39 +360,88 @@ export default function AboutUs() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-8">
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64 hover:shadow-xl transition-shadow duration-300">
               <img
                 src="/sangil.png"
                 alt="Hospital Regional de Sangil"
-                className="w-11/12 h-64 object-contain"
+                className="w-11/12 h-64 object-contain hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64 hover:shadow-xl transition-shadow duration-300">
               <img
                 src="esp.png"
                 alt="espsalud ips"
-                className="w-11/12 h-56 object-contain"
+                className="w-11/12 h-56 object-contain hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64 hover:shadow-xl transition-shadow duration-300">
               <img
                 src="/hea.png"
                 alt="heath"
-                className="w-11/12 h-56 object-contain"
+                className="w-11/12 h-56 object-contain hover:scale-105 transition-transform duration-300"
               />
             </div>
-            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64">
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64 hover:shadow-xl transition-shadow duration-300">
               <img
                 src="/bios.png"
                 alt="Ibiossanar ips"
-                className="w-11/12 h-56 object-contain"
+                className="w-11/12 h-56 object-contain hover:scale-105 transition-transform duration-300"
               />
+            </div>
+            {/* Nuevo convenio - reemplaza con tu imagen real */}
+            <div className="bg-white p-1 rounded-lg shadow-lg flex items-center justify-center h-64 hover:shadow-xl transition-shadow duration-300">
+              <img
+                src="/1.png"
+                alt="Nuevo Convenio"
+                className="w-11/12 h-56 object-contain hover:scale-105 transition-transform duration-300"
+                onError={(e) => {
+                  // Fallback en caso de que la imagen no exista
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+
+            </div>
+          </div>
+
+          {/* Información adicional sobre convenios */}
+          <div className="mt-12 bg-gray-50 p-8 rounded-lg">
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-[#003366] mb-4">Beneficios de Nuestros Convenios</h3>
+              <div className="grid md:grid-cols-3 gap-6 mt-8">
+                <div className="text-center">
+                  <div className="bg-[#00B140] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="font-semibold text-[#003366] mb-2">Experiencia Real</h4>
+                  <p className="text-gray-600 text-sm">Prácticas en entornos hospitalarios reales desde el primer semestre</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-[#00B140] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
+                    </svg>
+                  </div>
+                  <h4 className="font-semibold text-[#003366] mb-2">Supervisión Calificada</h4>
+                  <p className="text-gray-600 text-sm">Acompañamiento de profesionales experimentados durante las prácticas</p>
+                </div>
+                <div className="text-center">
+                  <div className="bg-[#00B140] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2-2v2m8 0V6a2 2 0 012 2v6a2 2 0 01-2 2H8a2 2 0 01-2-2V8a2 2 0 012-2V6" />
+                    </svg>
+                  </div>
+                  <h4 className="font-semibold text-[#003366] mb-2">Oportunidades Laborales</h4>
+                  <p className="text-gray-600 text-sm">Posibilidades de empleo directo en nuestras instituciones aliadas</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
-
       {/* Sección de Call-to-Action */}
       <section className="py-16 bg-[#003366]">
         <div className="max-w-5xl mx-auto px-6 text-center">
@@ -414,8 +466,183 @@ export default function AboutUs() {
         </div>
       </section>
 
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-[#003366]">Cursos de Formación Complementaria</h2>
+            <div className="w-20 h-1 bg-[#00B140] mx-auto mt-4"></div>
+            <p className="mt-6 text-lg text-gray-700 max-w-3xl mx-auto">
+              Amplía tus conocimientos con nuestros cursos especializados, diseñados para profesionales que buscan actualización y nuevas competencias
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="h-48 bg-gradient-to-r from-[#003366] to-[#00B140] relative overflow-hidden">
+                
+                <img
+                  src="/2.jpg"
+                  alt="Inyección médica"
+                   className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white z-10">
+                    <h3 className="text-xl font-bold drop-shadow-lg">Inyectologia</h3>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+                  40 horas
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#003366] mb-3">Curso integral de inyectología</h3>
+                <p className="text-gray-700 mb-4">
+                  Aprende técnicas de inyectología con prácticas necesarias para administrar inyecciones de manera segura y efectiva.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-4 h-4 mr-2 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                    Farmacología
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-4 h-4 mr-2 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                    Técnicas de Administración
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-[#00B140]">$130.000</span>
+                  <a
+                    href="/cursos"
+                    className="bg-[#003366] hover:bg-[#002347] text-white px-4 py-2 rounded-lg transition-colors duration-300"
+                  >
+                    Más info
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <div className="h-48 bg-gradient-to-r from-[#003366] to-[#00B140] relative overflow-hidden">
+                
+                <img
+                  src="/3.jpg"
+                  alt="Toma de muestras laboratorio"
+                  className="absolute inset-0 w-full h-full object-cover mix-blend-overlay"
+                />
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <div className="text-center text-white z-10">
+                    <h3 className="text-xl font-bold drop-shadow-lg">Toma de Muestras</h3>
+                  </div>
+                </div>
+                <div className="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium z-10">
+                  40 horas
+                </div>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-[#003366] mb-3">Toma de Muestras para Laboratorio Clínico</h3>
+                <p className="text-gray-700 mb-4">
+                  Aprende a realizar tomas de muestras clínicas con precisión y seguridad.
+                </p>
+                <div className="space-y-2 mb-4">
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-4 h-4 mr-2 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                    Técnicas de Toma de Muestras
+                  </div>
+                  <div className="flex items-center text-sm text-gray-600">
+                    <svg className="w-4 h-4 mr-2 text-[#00B140]" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
+                    </svg>
+                    Preparación del Paciente y del Personal
+                  </div>
+                </div>
+                <div className="flex justify-between items-center">
+                  <span className="text-2xl font-bold text-[#00B140]">$170.000</span>
+                  <a
+                    href="/cursos"
+                    className="bg-[#003366] hover:bg-[#002347] text-white px-4 py-2 rounded-lg transition-colors duration-300"
+                  >
+                    Más info
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          {/* Información adicional sobre cursos */}
+          <div className="mt-16 bg-white p-8 rounded-xl shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-[#003366] mb-4">¿Por qué elegir nuestros cursos?</h3>
+              <p className="text-gray-700 max-w-2xl mx-auto">
+                Nuestros cursos están diseñados por profesionales del sector salud y cumplen con los más altos estándares de calidad educativa
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-4 gap-6">
+              <div className="text-center">
+                <div className="bg-[#00B140] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-[#003366] mb-2">Clases teóricas con material didáctico actualizado</h4>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-[#00B140] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-[#003366] mb-2">Sesiones prácticas supervisadas (en simuladores y/o modelos reales)</h4>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-[#00B140] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-[#003366] mb-2">Evaluación final y retroalimentación personalizada</h4>
+              </div>
+
+              <div className="text-center">
+                <div className="bg-[#00B140] w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                </div>
+                <h4 className="font-semibold text-[#003366] mb-2">practicas presenciales todos los sábados de 2pm a 4pm</h4>
+              </div>
+            </div>
+
+            {/* Call to action */}
+            <div className="text-center mt-12">
+              <h4 className="text-xl font-bold text-[#003366] mb-4">¿Listo para potenciar tu carrera profesional?</h4>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="https://wa.me/573246723624?text=Hola%20quiero%20más%20información%20sobre%20los%20cursos%20de%20formación%20complementaria"
+                  className="inline-block bg-[#00B140] hover:bg-[#009935] text-white font-medium py-3 px-8 rounded-lg transition-colors duration-300"
+                >
+                  Solicitar información
+                </a>
+                <a
+                  href="/contacto"
+                  className="inline-block bg-white border-2 border-[#003366] text-[#003366] hover:bg-[#003366] hover:text-white font-medium py-3 px-8 rounded-lg transition-all duration-300"
+                >
+                  Ver todos los cursos
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Sección de Contacto */}
-      <section className="py-16 bg-gray-50">
+      < section className="py-16 bg-gray-50" >
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -545,7 +772,7 @@ export default function AboutUs() {
             </div>
           </div>
         </div>
-      </section>
+      </section >
 
       <Footer />
       <div className="fixed bottom-5 right-5 flex flex-col space-y-3 z-50">
@@ -577,6 +804,6 @@ export default function AboutUs() {
       </div>
 
 
-    </div>
+    </div >
   );
 }
